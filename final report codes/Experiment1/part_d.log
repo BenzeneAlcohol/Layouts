@@ -1,0 +1,4 @@
+Questionable use of curly braces in "altermod m0 vto = {$vth}"
+    Error: undefined symbol in: "[$vth]"
+Circuit: *nmos varying threshold voltage
+

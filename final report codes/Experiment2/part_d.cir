@@ -1,0 +1,29 @@
+*nmos inverter with passive resistive load
+
+.include ./t14y_tsmc_025_level3.txt
+
+*netlist
+m0 x in 0 0 cmosn w=2u l=1u
+rl vdd out 10k
+cl y 0 1f
+
+*voltage sources
+v_dd vdd 0 dc 5
+v_x out x dc 0
+v_in in 0 dc 5 pulse(0 5 1n 0.1n 0.1n 2n 4n)
+v_y out y dc 0
+
+*analysis
+.control
+	tran 0.1n 6n
+	setplot tran1
+	plot v_x#branch
+				
+	setplot tran2
+	plot in out
+
+	setplot tran3
+	plot v_y#branch
+.endc
+
+.end

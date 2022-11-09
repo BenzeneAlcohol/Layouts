@@ -1,0 +1,26 @@
+*nmos characteristics varying lambda
+
+.include t14y_tsmc_025_level1.txt
+
+*netlist
+m0 vdd in vss vss ritsubn1 w = 50u l = 50u
+
+*voltage sources
+v_dd vdd 0 dc 5
+v_ss vss 0 dc 0
+v_in in 0 dc 2.5
+
+*analysis
+.control
+	foreach lam 0.03 1.03 2.03
+		altermod m0 LAMBDA = $lam
+		
+		dc v_dd 0 5 0.1
+		
+		setplot dc$lam
+		plot -v_dd#branch
+		
+	end
+.endc
+
+.end

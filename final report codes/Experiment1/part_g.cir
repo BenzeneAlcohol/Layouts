@@ -1,0 +1,35 @@
+*nmos characteristics varying temperature
+
+.include ./t14y_tsmc_025_level3.txt
+
+*netlist
+m0 vdd in 0 0 cmosn l=1 w=2u
+
+*voltage sources
+v_dd vdd 0 dc 5
+v_in in 0 dc 5
+
+*analysis
+.control
+	set TEMP = 30
+	dc v_in 0 5 0.1
+	
+	setplot dc1
+	plot -v_dd#branch
+
+	set TEMP = 50
+	dc v_in 0 5 0.1
+	
+	setplot dc2
+	plot -v_dd#branch
+
+	set TEMP = 70
+	dc v_in 0 5 0.1
+	
+	setplot dc3
+	plot -v_dd#branch
+
+.endc
+.end	
+	
+
