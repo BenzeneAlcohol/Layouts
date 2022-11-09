@@ -1,0 +1,37 @@
+* SPICE3 file created from nand.ext - technology: scmos
+.include t14y_tsmc_025_level3.txt
+
+.option scale=1u
+
+M1000 vout vin_b a_n11_n1# Gnd cmosn w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1001 vdd vin_b vout vdd cmosp w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1002 vout vin_a vdd vdd cmosp w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1003 a_n11_n1# vin_a vss Gnd cmosn w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 vss 0 7.80fF **FLOATING
+C1 vout 0 3.43fF **FLOATING
+C2 vin_b 0 7.60fF **FLOATING
+C3 vin_a 0 7.29fF **FLOATING
+
+
+*Voltage sources
+v_dd vdd 0 dc 5
+v_ss vss 0 dc 0
+v_in_a vin_a 0 dc 5 pulse(0 5 1n 1p 1p 3n 6n)
+v_in_b vin_b 0 dc 5 pulse(0 5 1n 1p 1p 6n 12n)
+
+.control
+tran 0.1n 14n
+
+setplot tran1
+plot vin_a vin_b vout
+
+.endc
+.end
+
+
+
+

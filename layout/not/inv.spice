@@ -1,0 +1,18 @@
+* SPICE3 file created from inv.ext - technology: scmos
+.include t14y_tsmc_025_level3.txt
+
+.option scale=1u
+
+M1000 vout vin vdd vdd cmosp w=20 l=5
++  ad=0 pd=0 as=0 ps=0
+M1001 vout vin vss vss cmosn w=10 l=5
++  ad=0 pd=0 as=0 ps=0
+C0 vdd vin 2.27fF
+C1 vss 0 4.93fF **FLOATING
+C2 vout 0 2.44fF **FLOATING
+C3 vin 0 10.00fF **FLOATING
+
+*Voltage sources
+v_dd vdd 0 dc 5
+v_in vin 0 dc 5
+v_ss vss 0 dc 0

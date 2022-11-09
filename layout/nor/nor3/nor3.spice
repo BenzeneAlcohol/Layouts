@@ -1,0 +1,21 @@
+* SPICE3 file created from nor3.ext - technology: scmos
+
+.option scale=1u
+
+M1000 vout vin_b vss Gnd nfet w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1001 a_7_8# vin_b a_n3_8# vdd pfet w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1002 vss vin_a vout Gnd nfet w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1003 vss vin_c vout Gnd nfet w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1004 vdd vin_c a_7_8# vdd pfet w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+M1005 a_n3_8# vin_a vout vdd pfet w=20 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 vss 0 5.26fF **FLOATING
+C1 vout 0 5.83fF **FLOATING
+C2 vin_c 0 8.48fF **FLOATING
+C3 vin_b 0 6.58fF **FLOATING
+C4 vin_a 0 9.43fF **FLOATING

@@ -1,0 +1,22 @@
+| units: 100 tech: scmos format: MIT
+p a_14_n20# vdd vout 2 10 14 13
+n a_14_n20# a_5_n18# vout 2 10 14 -17
+p vin_a vdd vout 2 10 -6 13
+p vin_b vout vdd 2 10 3 13
+n vin_b a_n5_n18# a_5_n18# 2 10 3 -17
+n vin_a vss a_n5_n18# 2 10 -6 -17
+R a_5_n18# 30
+R a_n5_n18# 33
+C vss GND 14.48
+R vss 113
+C vin_c GND 3.17
+R vin_c 48
+C vout GND 9.40
+R vout 381
+C a_14_n20# GND 5.72
+R a_14_n20# 537
+C vin_b GND 7.30
+R vin_b 538
+C vin_a GND 11.72
+R vin_a 577
+R vdd 4149

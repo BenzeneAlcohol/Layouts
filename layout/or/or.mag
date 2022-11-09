@@ -1,0 +1,108 @@
+magic
+tech scmos
+timestamp 1667375266
+<< nwell >>
+rect -21 17 1 70
+rect 16 22 35 57
+<< polysilicon >>
+rect -15 58 -13 60
+rect -7 58 -5 60
+rect 23 43 28 45
+rect -15 14 -13 18
+rect -21 10 -13 14
+rect -15 6 -13 10
+rect -7 14 -5 18
+rect 3 14 7 21
+rect 23 18 28 23
+rect 14 14 28 18
+rect -7 10 7 14
+rect -7 6 -5 10
+rect 23 9 28 14
+rect 23 -3 28 -1
+rect -15 -6 -13 -4
+rect -7 -6 -5 -4
+<< ndiffusion >>
+rect -20 0 -15 6
+rect -16 -4 -15 0
+rect -13 2 -12 6
+rect -8 2 -7 6
+rect -13 -4 -7 2
+rect -5 0 0 6
+rect -5 -4 -4 0
+rect 21 5 23 9
+rect 17 -1 23 5
+rect 28 5 30 9
+rect 28 -1 34 5
+<< pdiffusion >>
+rect -16 54 -15 58
+rect -20 18 -15 54
+rect -13 18 -7 58
+rect -5 22 0 58
+rect 17 27 23 43
+rect -5 18 -4 22
+rect 21 23 23 27
+rect 28 27 34 43
+rect 28 23 30 27
+<< metal1 >>
+rect -20 68 0 69
+rect -20 64 -5 68
+rect -1 64 0 68
+rect -20 63 0 64
+rect -20 58 -16 63
+rect 17 52 29 56
+rect 33 52 34 56
+rect 17 51 34 52
+rect 17 27 21 51
+rect -4 14 0 18
+rect 3 14 10 18
+rect -12 10 7 14
+rect -12 6 -8 10
+rect 30 9 34 23
+rect -20 -9 -16 -4
+rect -4 -9 0 -4
+rect -20 -10 0 -9
+rect -20 -14 -5 -10
+rect -1 -14 0 -10
+rect -20 -15 0 -14
+rect 17 -10 21 5
+rect 17 -14 29 -10
+rect 33 -14 34 -10
+rect 17 -15 34 -14
+<< ntransistor >>
+rect -15 -4 -13 6
+rect -7 -4 -5 6
+rect 23 -1 28 9
+<< ptransistor >>
+rect -15 18 -13 58
+rect -7 18 -5 58
+rect 23 23 28 43
+<< polycontact >>
+rect 3 21 7 25
+rect -25 10 -21 14
+rect 10 14 14 18
+<< ndcontact >>
+rect -20 -4 -16 0
+rect -12 2 -8 6
+rect -4 -4 0 0
+rect 17 5 21 9
+rect 30 5 34 9
+<< pdcontact >>
+rect -20 54 -16 58
+rect -4 18 0 22
+rect 17 23 21 27
+rect 30 23 34 27
+<< psubstratepcontact >>
+rect -5 -14 -1 -10
+rect 29 -14 33 -10
+<< nsubstratencontact >>
+rect -5 64 -1 68
+rect 29 52 33 56
+<< labels >>
+rlabel metal1 -12 -14 -8 -10 5 vss
+rlabel polycontact -25 10 -21 14 7 vin_a
+rlabel metal1 -12 64 -8 68 1 vdd
+rlabel metal1 30 14 34 18 3 vout
+rlabel metal1 22 52 26 56 1 vdd
+rlabel metal1 22 -15 26 -11 5 vss
+rlabel polycontact 3 21 7 25 3 vin_b
+<< end >>

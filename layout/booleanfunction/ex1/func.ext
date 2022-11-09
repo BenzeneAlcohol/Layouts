@@ -1,0 +1,28 @@
+timestamp 1667428121
+version 8.3
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+node "a_0_n13#" 27 0 0 -13 ndiff 64 32 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "vss" 217 7520 -8 -13 ndc 112 60 16 16 0 0 0 0 0 0 0 0 208 112 0 0 0 0
+node "vout" 131 4700 10 -13 ndiff 64 32 112 44 0 0 0 0 0 0 0 0 160 88 0 0 0 0
+node "a_n8_15#" 409 4136 -8 15 pdc 0 0 196 84 0 0 0 0 0 0 0 0 144 80 0 0 0 0
+node "vin_c" 578 10534 18 -15 p 0 0 0 0 156 128 0 0 0 0 0 0 16 16 0 0 0 0
+node "vin_b" 550 7058 3 1 pc 0 0 0 0 112 106 0 0 0 0 0 0 16 16 0 0 0 0
+node "vin_a" 562 8954 -13 1 pc 0 0 0 0 136 118 0 0 0 0 0 0 16 16 0 0 0 0
+node "vdd" 3794 0 -9 14 nw 16 16 112 44 0 0 0 0 0 0 0 0 216 100 0 0 988 128
+cap "vdd" "vin_a" 1194
+cap "vin_b" "a_n8_15#" 240
+cap "vdd" "vin_b" 1194
+cap "vdd" "a_n8_15#" 376
+cap "vdd" "vin_c" 1194
+cap "vdd" "vout" 188
+cap "vout" "vin_c" 720
+cap "vin_a" "a_n8_15#" 240
+device mosfet nfet 18 -13 19 -12 2 8 "Gnd!" "vin_c" 4 0 "vout" 8 0 "vss" 8 0
+device mosfet nfet 8 -13 9 -12 2 8 "Gnd!" "vin_b" 4 0 "a_0_n13#" 8 0 "vout" 8 0
+device mosfet nfet -2 -13 -1 -12 2 8 "Gnd!" "vin_a" 4 0 "vss" 8 0 "a_0_n13#" 8 0
+device mosfet pfet 18 15 19 16 2 14 "vdd" "vin_c" 4 0 "a_n8_15#" 14 0 "vout" 14 0
+device mosfet pfet 8 15 9 16 2 14 "vdd" "vin_b" 4 0 "vdd" 14 0 "a_n8_15#" 14 0
+device mosfet pfet -2 15 -1 16 2 14 "vdd" "vin_a" 4 0 "a_n8_15#" 14 0 "vdd" 14 0

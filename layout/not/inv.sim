@@ -1,0 +1,11 @@
+| units: 100 tech: scmos format: MIT
+p vin vdd vout 5 20 2 -31
+n vin vss vout 5 10 2 -55
+C vin vdd 2.27
+C vss GND 4.93
+R vss 104
+C vout GND 2.44
+R vout 243
+C vin GND 10.00
+R vin 295
+R vdd 4842
